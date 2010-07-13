@@ -92,7 +92,7 @@ class attack_payloads:
     class disclosure_source:
         """ This implements the disclosure-source from fuzzdb """
         
-        # common-unix-httpd-log-locations.txt
+        # source-disc-cmd-exec-traversal
         location = "/data/attack-payloads/disclosure-source/source-disc-cmd-exec-traversal.txt"
 
         path = MODPATH + location

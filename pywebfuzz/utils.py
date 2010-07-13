@@ -7,14 +7,14 @@ import urllib
 import urllib2
 from EncoderLib import *
 
-def make_request(location, verb="GET", postdata=None, headers=None):
+def make_request(location, method="GET", postdata=None, headers=None):
     """ This provides a convenience function for making requests. This interfaces
     with urllib2 and provides the ability to make GET and POST requests for content.
     The return data from this function is headers and content"""
     
     # Checks to ensure that if it is a POST request that postdata is present
     # I may remove this because it could potentially be a valid test case w/o data
-    if verb == "POST" and postdata == None:
+    if method == "POST" and postdata == None:
         print("You did not specify any associated postdata and this is a POST request")
         sys.exit(1)
     
@@ -29,7 +29,7 @@ def make_request(location, verb="GET", postdata=None, headers=None):
     ####
     
     # Takes the appropriate actions based on the request type
-    if verb == "GET":
+    if method == "GET":
         if headers:
             req = urllib2.Request(location, headers=headers)
         else:
@@ -41,7 +41,7 @@ def make_request(location, verb="GET", postdata=None, headers=None):
         content = response.read()
         return(headers, content)
         
-    elif verb == "POST":
+    elif method == "POST":
         if headers:
             req = urllib2.Request(location, headers=headers)
         else:
@@ -55,7 +55,7 @@ def make_request(location, verb="GET", postdata=None, headers=None):
         return(headers, content)
         
     else:
-        print("Invalid verb for make_request function")
+        print("Invalid method for make_request function")
     
 def generate_range(start, stop, step=1, pre=None, post=None):
     """ Generate a range of values with optional stepping. Chars can be prepended or attached to
