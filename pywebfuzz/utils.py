@@ -1,11 +1,28 @@
 #!/usr/bin/env python
 
 """ This is the fuzzutils package. This contains useful items for performing
-your fuzzing tasks agaist web applications """
+your fuzzing tasks agaist web applications
+
+(c) 2010 Nathan Hamiel
+Email: nathan{at}neohaxor{dot}org
+Hexsec Labs: http://hexsec.com/labs
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>
+"""
 
 import urllib
 import urllib2
-from EncoderLib import *
 
 def make_request(location, method="GET", postdata=None, headers=None):
     """ This provides a convenience function for making requests. This interfaces
@@ -59,7 +76,7 @@ def make_request(location, method="GET", postdata=None, headers=None):
     
 def generate_range(start, stop, step=1, pre=None, post=None):
     """ Generate a range of values with optional stepping. Chars can be prepended or attached to
-    the end of each value that is generated """
+    the end of each value that is generated. """
     
     rangevals = range(start, stop, step)
     values = []

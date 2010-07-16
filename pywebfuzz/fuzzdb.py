@@ -1,4 +1,28 @@
 #!/usr/bin/env python
+"""
+This module uses logic to implement values from the fuzzdb project. The fuzzdb
+project.
+
+(c) 2010 Nathan Hamiel
+Email: nathan{at}neohaxor{dot}org
+Hexsec Labs: http://hexsec.com/labs
+
+fuzzdb project is (c) 2010 Adam Munter http://code.google.com/p/fuzzdb
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+"""
 import os
 import sys
 
@@ -7,7 +31,7 @@ MODPATH = os.path.dirname(__file__)
 class attack_payloads:
     """ Placeholder namespace for the attack_payloads"""
     class all_attacks:
-        """ This implements the all-attacks from fuzzdb """
+        """ This implements the all-attacks class of values from fuzzdb """
         
         # all-attacks-unix.txt
         location = "/data/attack-payloads/all-attacks/all-attacks-unix.txt"
@@ -45,7 +69,7 @@ class attack_payloads:
         """ This implements the disclosure-directory from fuzzdb """
         
         class generic:
-            """ generic payloads """
+            """ This implements the generic payloads from fuzzdb """
             
             # directory-indexing-generic.txt
             location = "/data/attack-payloads/disclosure-directory/generic/directory-indexing-generic.txt"
@@ -60,22 +84,22 @@ class attack_payloads:
             file.close()
         
         class unix:
-            """ unix payloads """
+            """ This implements the unix payloads from fuzzdb """
             # This class is currently empty
         
         class win:
-            """ win payloads """
+            """ This implements the win payloads from fuzzdb"""
             # This class is currently empty
             
     class disclosure_localpaths:
         """ This implements the disclosure-localpaths from fuzzdb """
         
         class microsoft:
-            """ microsoft """
+            """ microsoft payloads """
             # This class is currently empty
         
         class unix:
-            """ unix """
+            """ unix payloads"""
             
             # common-unix-httpd-log-locations.txt
             location = "/data/attack-payloads/disclosure-localpaths/unix/common-unix-httpd-log-locations.txt"
@@ -381,6 +405,7 @@ class attack_payloads:
         file.close()
         
     class ldap:
+        """ This implements the ldap payloads from fuzzdb """
         
         # ldap-injection.txt
         location = "/data/attack-payloads/ldap/ldap-injection.txt"
@@ -395,7 +420,7 @@ class attack_payloads:
         file.close()
         
     class lfi:
-        
+        """ This implements the lfi payloads from fuzzdb """
         # common-unix-httpd-log-locations.txt
         location = "/data/attack-payloads/lfi/common-unix-httpd-log-locations.txt"
         
@@ -409,6 +434,7 @@ class attack_payloads:
         file.close()
         
     class os_cmd_execution:
+        """ This implements the os-command-execution payloads from fuzzdb """
         
         # command-execution-unix.txt
         location = "/data/attack-payloads/os-cmd-execution/command-execution-unix.txt"
@@ -459,7 +485,7 @@ class attack_payloads:
         file.close()
         
     class os_dir_indexing:
-        
+        """ This implements the os-dir-indexing payloads from fuzzdb """
         # directory-indexing.txt
         location = "/data/attack-payloads/os-dir-indexing/directory-indexing.txt"
         
@@ -473,7 +499,7 @@ class attack_payloads:
         file.close()
         
     class path_traversal:
-        
+        """ This implements the path-traversal payloads from fuzzdb """
         # directory-indexing.txt
         location = "/data/attack-payloads/path-traversal/path-traversal-windows.txt"
         
@@ -499,7 +525,7 @@ class attack_payloads:
         file.close()
         
     class rfi:
-        
+        """ This implements the rfi payloads from fuzzdb """
         # rfi.txt
         location = "/data/attack-payloads/rfi/rfi.txt"
         
@@ -513,7 +539,7 @@ class attack_payloads:
         file.close()
         
     class server_side_include:
-        
+        """ This implements the server-side-include payloads from fuzzdb """
         # server-side-includes-generic.txt
         location = "/data/attack-payloads/server-side-include/server-side-includes-generic.txt"
         
@@ -527,11 +553,11 @@ class attack_payloads:
         file.close()
         
     class sql_injection:
-        
+        """ This implements the sql-injection class of payloads from fuzzdb """
         class detect:
-            
+            """ This implements detection class payloads from fuzzdb """
             class generic:
-                
+                """ This implements the generic sql detection payloads from fuzzdb """
                # sql-injection-active.txt
                 location = "/data/attack-payloads/sql-injection/detect/generic/sql-injection-active.txt"
         
@@ -570,7 +596,7 @@ class attack_payloads:
                 file.close()
                 
             class ms_sql:
-                
+                """ This implements the ms-sql detection payloads from fuzzdb """
                 # sql-injection-ms-sql-blind-ninja.txt
                 location = "/data/attack-payloads/sql-injection/detect/ms-sql/sql-injection-ms-sql-blind-ninja.txt"
         
@@ -596,7 +622,7 @@ class attack_payloads:
                 file.close()
                 
             class mysql:
-                
+                """ This implements the mysql detection payloads from fuzzdb """
                 # sql-injection-mysql-ms-sql.txt
                 location = "/data/attack-payloads/sql-injection/detect/mysql/sql-injection-mysql-ms-sql.txt"
         
@@ -622,7 +648,7 @@ class attack_payloads:
                 file.close()
                 
             class oracle:
-                
+                """ This implements the oracle detection payloads from fuzzdb """
                 # sql-injection-oracle.txt
                 location = "/data/attack-payloads/sql-injection/detect/oracle/sql-injection-oracle.txt"
         
@@ -636,7 +662,7 @@ class attack_payloads:
                 file.close()
                 
         class exploit:
-            
+            """ This implements the exploit class of payloads from fuzzdb """
             # db2-enumeration.txt
             location = "/data/attack-payloads/sql-injection/exploit/db2-enumeration.txt"
         
@@ -698,7 +724,7 @@ class attack_payloads:
             file.close()
             
     class xml:
-        
+        """ This implements the xml payloads from fuzzdb """
         # xml-attacks.txt
         location = "/data/attack-payloads/xml/xml-attacks.txt"
         
@@ -712,7 +738,7 @@ class attack_payloads:
         file.close()
         
     class xpath:
-        
+        """ This implements the xpath payloads from fuzzdb """
         # xpath-injection.txt
         location = "/data/attack-payloads/xpath/xpath-injection.txt"
         
@@ -726,7 +752,7 @@ class attack_payloads:
         file.close()
         
     class xss:
-        
+        """ This implements the xss payloads from fuzzdb """
         # xss-rsnake.txt
         location = "/data/attack-payloads/xss/xss-rsnake.txt"
         
@@ -752,10 +778,11 @@ class attack_payloads:
         file.close()
         
 class discovery:
-    
+    """ This implements the discovery class from fuzzdb """
     class filename_bruteforce:
-        
+        """ This implements the filename-bruteforce class from fuzzdb """
         class file_extensions:
+            """ This implements the file-extensions payloads from fuzzdb """
             
             
             # file-extensions-backup-files.txt
@@ -819,7 +846,7 @@ class discovery:
             file.close()
             
         class file_or_dir_root_wordlists:
-            
+            """ This implements the file-or-dir-root-wordlists payloads from fuzzdb """
             # wordlist-skipfish.txt
             location = "/data/discovery/filename-bruteforce/file-or-dir-root-wordlists/wordlist-skipfish.txt"
         
@@ -833,8 +860,9 @@ class discovery:
             file.close()
             
     class generic:
-        
+        """ This implements the generic class from fuzzdb """
         class cms:
+            """ This implements the cms payloads from fuzzdb """
             
             # drupal_plugins.txt
             location = "/data/discovery/generic/cms/drupal_plugins.txt"
@@ -1089,7 +1117,7 @@ class discovery:
         file.close()
         
     class unix:
-        
+        """ This implements the unix payloads from fuzzdb """
         # interesting-files-dotfiles.txt
         location = "/data/discovery/unix/interesting-files-dotfiles.txt"
         
@@ -1127,7 +1155,7 @@ class discovery:
         file.close()
         
     class win:
-        
+        """ This implements the win payloads from fuzzdb """
         # cgi-HTTP-POST-reqd-microsoft.txt
         location = "/data/discovery/win/cgi-HTTP-POST-reqd-microsoft.txt"
         
@@ -1201,7 +1229,7 @@ class discovery:
         file.close()
         
 class regex:
-    
+    """ This implements the regex payloads from fuzzdb """
     # errors.txt
     location = "/data/regex/errors.txt"
         
@@ -1227,7 +1255,7 @@ class regex:
     file.close()
     
 class wordlists_misc:
-    
+    """ This implements the wordlists-misc payloads from fuzzdb """
     # common-http-ports.txt
     location = "/data/wordlists-misc/common-http-ports.txt"
         
@@ -1289,9 +1317,9 @@ class wordlists_misc:
     file.close()
     
 class wordlists_user_passwd:
-    
+    """ This implements the wordlists-user-passwd class from fuzzdb """
     class db2:
-        
+        """ This implements the db2 payloads from fuzzdb """
         # db2_default_pass.txt
         location = "/data/wordlists-user-passwd/db2/db2_default_pass.txt"
         
@@ -1329,7 +1357,7 @@ class wordlists_user_passwd:
         file.close()
         
     class generic_listpairs:
-        
+        """ This implements the generic-listpairs payloads from fuzzdb """
         # http_default_pass.txt
         location = "/data/wordlists-user-passwd/generic-listpairs/http_default_pass.txt"
         
@@ -1367,7 +1395,7 @@ class wordlists_user_passwd:
         file.close()
         
     class names:
-        
+        """ This implements the names payloads from fuzzdb """
         # namelist.txt
         location = "/data/wordlists-user-passwd/names/namelist.txt"
         
@@ -1381,7 +1409,7 @@ class wordlists_user_passwd:
         file.close()
         
     class oracle:
-        
+        """ This implements the oracle payloads from fuzzdb """
         # _hci_oracle_passwords.txt
         location = "/data/wordlists-user-passwd/oracle/_hci_oracle_passwords.txt"
         
@@ -1407,7 +1435,7 @@ class wordlists_user_passwd:
         file.close()
         
     class passwds:
-        
+        """ This implements the passwds payloads from fuzzdb """
         # john.txt
         location = "/data/wordlists-user-passwd/passwds/john.txt"
         
@@ -1457,7 +1485,7 @@ class wordlists_user_passwd:
         file.close()
         
     class postgres:
-        
+        """ This implements the postgres payloads from fuzzdb """
         # postgres_default_pass.txt
         location = "/data/wordlists-user-passwd/postgres/postgres_default_pass.txt"
         
@@ -1495,7 +1523,7 @@ class wordlists_user_passwd:
         file.close()
         
     class tomcat:
-        
+        """ This implements the tomcat payloads from fuzzdb """
         # tomcat_mgr_default_pass.txt
         location = "/data/wordlists-user-passwd/tomcat/tomcat_mgr_default_pass.txt"
         
@@ -1533,7 +1561,7 @@ class wordlists_user_passwd:
         file.close()
         
     class unix_os:
-        
+        """ This implements the unix-os payloads from fuzzdb """
         # unix_passwords.txt
         location = "/data/wordlists-user-passwd/unix-os/unix_passwords.txt"
         
