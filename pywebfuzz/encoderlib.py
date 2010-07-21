@@ -145,6 +145,20 @@ def sqlchar_encode(encvalue):
     
     return(charstring.rstrip("+"))
     
+####
+# oraclechr_encode not tested yet, but should work
+####
+def oraclechr_encode(encvalue):
+    """ Oracle chr encode the specified value. """
+    
+    charstring = ""
+    
+    for item in encvalue:
+        val = "chr(" + str(ord(item)) + ")||"
+        charstring += val
+        
+    return(charstring.rstrip("||"))
+
 def decimal_convert(encvalue):
     """ Convert input to decimal value.
     Example Format: 721011081081113287111114108100 """

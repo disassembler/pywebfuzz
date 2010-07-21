@@ -65,6 +65,19 @@ class attack_payloads:
             interesting_metacharacters.append(item.rstrip())
         file.close()
         
+    class control_chars:
+        """ This implements the control-chars directory from fuzzdb """
+        
+        # null.fuzz
+        location = "/data/attack-payloads/control-chars/null.fuzz"
+        
+        path = MODPATH + location
+        file = open(path, "rb")
+        null_fuzz = list()
+        for item in file.readlines():
+            null_fuzz.append(item.rstrip())
+        file.close()
+        
     class disclosure_directory:
         """ This implements the disclosure-directory from fuzzdb """
         
@@ -350,10 +363,38 @@ class attack_payloads:
             
         file.close()
         
+    class html_fuzz:
+        """ This implements the html_fuzz from the fuzzdb """
+        
+        # html_tags.txt
+        location = "/data/attack-payloads/html_fuzz/html_tags.txt"
+        
+        path = MODPATH + location
+
+        file = open(path, "rb")
+        html_tags = list()
+        for item in file.readlines():
+           html_tags.append(item.rstrip())
+            
+        file.close()
+        
+        # javascript_events.txt
+        location = "/data/attack-payloads/html_fuzz/javascript_events.txt"
+        
+        path = MODPATH + location
+
+        file = open(path, "rb")
+        javascript_events = list()
+        for item in file.readlines():
+           javascript_events.append(item.rstrip())
+            
+        file.close()
+        
+        
     class http_protocol:
         """ This implements the http-protocol from fuzzdb """
         
-        # format-strings.txt
+        # http-header-cache-poison.txt
         location = "/data/attack-payloads/http-protocol/http-header-cache-poison.txt"
         
         path = MODPATH + location
