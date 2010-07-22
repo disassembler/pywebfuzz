@@ -1,4 +1,0 @@
-tiger
-postgres
-password
-admin
