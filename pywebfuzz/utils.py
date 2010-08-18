@@ -100,3 +100,18 @@ def generate_range(start, stop, step=1, pre=None, post=None):
             return(values)
     except:
         print("You did not specify all of the values necessary for this function")
+        
+def webstring(value):
+    """ Convert a Python dictionary to a web string where the values are in the
+    format of 'foo=bar&up=down'. This is necessary when processing needs to be done
+    on a dictionary but the values need to be passed to urllib2 as POST data. """
+    
+    data = ""
+    for key in value:
+        newstring = key + "=" + value[key] + "&"
+        data += newstring
+        
+    return(data.rstrip("&"))
+        
+    
+        
