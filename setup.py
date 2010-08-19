@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 
-# from distutils.core import setup
-from setuptools import setup, find_packages
 import sys
+try:
+    from setuptools import setup, find_packages
+except:
+    print("You do not have setuptools installed. http://pypi.python.org/pypi/setuptools")
+    sys.exit(1)
 
-VERSION = "0.3.0"
+VERSION = "0.4.0"
 
 long_description = """pywebfuzz is a Python module to assist in the
 identification of vulnerabilities in web applications through brute force methods.
@@ -41,12 +44,11 @@ setup(name="pywebfuzz",
       author="Nathan Hamiel",
       author_email="nhamiel@gmail.com",
       url="http://code.google.com/p/pywebfuzz/",
-      download_url="http://pywebfuzz.googlecode.com/files/pywebfuzz_{0}.zip".format(VERSION),
+      download_url="http://pywebfuzz.googlecode.com/files/pywebfuzz_{0}.tar.gz".format(VERSION),
       license="GPLv3",
       description="A Python module to assist in fuzzing web applications",
       long_description=long_description,
       package_dir=package_dir,
       packages=["pywebfuzz"],
       include_package_data=True,
-      #package_data={"pywebfuzz": ["*.txt", "*.fuzz"]},
       classifiers=classifiers)
