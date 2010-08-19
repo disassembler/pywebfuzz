@@ -1,3 +1,4 @@
+# based on list by Joseph Giron http://www.wtfchan.org/~evil1/Web-Shells-rev2.pdf
 /apache/logs/error.log 
 /apache/logs/access.log 
 /apache/logs/error.log 

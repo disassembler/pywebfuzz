@@ -1,3 +1,4 @@
+# derived from fuzz file by Foobar@email.de
 %s%p%x%d
 %p%p%p%p
 %x%x%x%x

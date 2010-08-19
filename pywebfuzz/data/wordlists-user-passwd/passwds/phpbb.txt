@@ -1,3 +1,4 @@
+# from http://downloads.skullsecurity.org/passwords/phpbb.txt
 123456
 password
 phpbb

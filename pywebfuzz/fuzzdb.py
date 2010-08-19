@@ -37,7 +37,10 @@ def file_read(location):
     vals = list()
     
     for item in file.readlines():
-        vals.append(item.rstrip())
+        if item.startswith("# "):
+            pass
+        else:
+            vals.append(item.rstrip())
         
     file.close()
     
@@ -282,45 +285,34 @@ class attack_payloads:
         """ This implements the sql-injection class of payloads from fuzzdb """
         class detect:
             """ This implements detection class payloads from fuzzdb """
-            class generic:
-                """ This implements the generic sql detection payloads from fuzzdb """
-               # sql-injection-active.txt
-                location = "/data/attack-payloads/sql-injection/detect/generic/sql-injection-active.txt"
-                sql_injection_active = file_read(location)
-                
-                # sql-injection-passive.txt
-                location = "/data/attack-payloads/sql-injection/detect/generic/sql-injection-passive.txt"
-                sql_injection_passive = file_read(location)
-                                
-                # sql-injection.txt
-                location = "/data/attack-payloads/sql-injection/detect/generic/sql-injection.txt"
-                sql_injection = file_read(location)
-                
-            class ms_sql:
-                """ This implements the ms-sql detection payloads from fuzzdb """
-                # sql-injection-ms-sql-blind-ninja.txt
-                location = "/data/attack-payloads/sql-injection/detect/ms-sql/sql-injection-ms-sql-blind-ninja.txt"
-                sql_injection_ms_sql_blind_ninja = file_read(location)
-                
-                # sql-injection-ms-sql.txt
-                location = "/data/attack-payloads/sql-injection/detect/ms-sql/sql-injection-ms-sql.txt"
-                sql_injection_ms_sql = file_read(location)
-                
-            class mysql:
-                """ This implements the mysql detection payloads from fuzzdb """
-                # sql-injection-mysql-ms-sql.txt
-                location = "/data/attack-payloads/sql-injection/detect/mysql/sql-injection-mysql-ms-sql.txt"
-                sql_injection_mysql_ms_sql = file_read(location)
-                
-                # sql-injection-mysql.txt
-                location = "/data/attack-payloads/sql-injection/detect/mysql/sql-injection-mysql.txt"
-                sql_injection_mysql = file_read(location)
-                
-            class oracle:
-                """ This implements the oracle detection payloads from fuzzdb """
-                # sql-injection-oracle.txt
-                location = "/data/attack-payloads/sql-injection/detect/oracle/sql-injection-oracle.txt"
-                sql_injection_oracle = file_read(location)
+            
+            # GenericBlind.fuzz.txt
+            location = "/data/attack-payloads/sql-injection/detect/GenericBlind.fuzz.txt"
+            GenericBlind = file_read(location)
+            
+            # MSSQL_blind.fuzz.txt
+            location = "/data/attack-payloads/sql-injection/detect/MSSQL_blind.fuzz.txt"
+            MSSQL_blind = file_read(location)
+            
+            # MSSQL.fuzz.txt
+            location = "/data/attack-payloads/sql-injection/detect/MSSQL.fuzz.txt"
+            MSSQL = file_read(location)
+            
+            # MySQL_MSSQL.fuzz.txt
+            location = "/data/attack-payloads/sql-injection/detect/MySQL_MSSQL.fuzz.txt"
+            MySQL_MSSQL = file_read(location)
+            
+            # MySQL.fuzz.txt
+            location = "/data/attack-payloads/sql-injection/detect/MySQL.fuzz.txt"
+            MySQL = file_read(location)
+            
+            # oracle.fuzz.txt
+            location = "/data/attack-payloads/sql-injection/detect/oracle.fuzz.txt"
+            oracle = file_read(location)
+            
+            # xplatform.fuzz.txt
+            location = "/data/attack-payloads/sql-injection/detect/xplatform.fuzz.txt"
+            xplatform = file_read(location)
                 
         class exploit:
             """ This implements the exploit class of payloads from fuzzdb """

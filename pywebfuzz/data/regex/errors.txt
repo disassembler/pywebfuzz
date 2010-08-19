@@ -1,3 +1,4 @@
+&lt;/font&gt;&lt;font face="Arial" size=2&gt;
 A syntax error has occurred
 ADODB.Field error
 ASP.NET is configured to show verbose error messages

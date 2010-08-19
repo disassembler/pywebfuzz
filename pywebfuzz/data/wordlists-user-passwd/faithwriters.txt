@@ -1,3 +1,4 @@
+# from http://downloads.skullsecurity.org/passwords/faithwriters.txt123456
 writer
 jesus1
 christ

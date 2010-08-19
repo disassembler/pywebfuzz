@@ -1,3 +1,5 @@
+#  All HTTP Verbs Defined in RFC's + 1 ARBITRARY Verb 1.0 - (Update: 16 March 2010)
+# creative commons
 OPTIONS
 GET
 HEAD

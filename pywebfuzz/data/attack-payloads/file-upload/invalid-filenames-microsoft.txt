@@ -1,3 +1,5 @@
+# Useful for causing error messages that contain an absolute drivepath, such as if you don't know where the file uploader puts files
+# regex replace {EXT} with allowed extension type 
 CON.{EXT}
 PRN.{EXT}
 AUX.{EXT}

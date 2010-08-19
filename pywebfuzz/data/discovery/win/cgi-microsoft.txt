@@ -1,3 +1,4 @@
+# on windows, cgi dir is usually /scripts /cgi /cgi-bin, but could be named anything or be the webroot.
 /cart32.exe
 /get32.exe
 /visadmin.exe

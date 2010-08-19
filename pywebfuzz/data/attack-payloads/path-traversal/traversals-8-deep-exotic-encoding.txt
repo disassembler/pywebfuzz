@@ -1,3 +1,6 @@
+# Derived from the awesome "Directory Traversal Fuzzing Code" v0.2 by Luca Carettoni
+# Did some cleanup & removed anything to the right of {FILE} for inclusion in a
+# separate fuzzfile for more flexibiity 
 /../{FILE}
 /../../{FILE}
 /../../../{FILE}
