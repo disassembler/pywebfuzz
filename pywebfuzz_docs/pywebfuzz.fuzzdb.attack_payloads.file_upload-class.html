@@ -200,13 +200,15 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="pywebfuzz.fuzzdb.attack_payloads.file_upload-class.html#file_ul_filter_bypass_ms_php" class="summary-name">file_ul_filter_bypass_ms_php</a> = <code title="['{PHPSCRIPT}',
+        <a href="pywebfuzz.fuzzdb.attack_payloads.file_upload-class.html#file_ul_filter_bypass_ms_php" class="summary-name">file_ul_filter_bypass_ms_php</a> = <code title="['#&lt;?php phpinfo(); ?&gt;',
+ '#-----',
+ '{PHPSCRIPT}',
  '{PHPSCRIPT}.phtml',
  '{PHPSCRIPT}.php.html',
  '{PHPSCRIPT}.php::$DATA',
  '{PHPSCRIPT}.php.php.rar',
  '{PHPSCRIPT}.php.rar',
- '{PHPSCRIPT}::$DATA']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.ph</code><code class="variable-ellipsis">...</code></code>
+..."><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#&lt;?php phpinfo(); ?&gt;</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">#----</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
@@ -220,18 +222,19 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="pywebfuzz.fuzzdb.attack_payloads.file_upload-class.html#file_ul_filter_bypass_x_platform_php" class="summary-name">file_ul_filter_bypass_x_platform_php</a> = <code title="['{PHPSCRIPT}',
+        <a href="pywebfuzz.fuzzdb.attack_payloads.file_upload-class.html#file_ul_filter_bypass_x_platform_php" class="summary-name">file_ul_filter_bypass_x_platform_php</a> = <code title="['#-----',
+ '{PHPSCRIPT}',
  '{PHPSCRIPT}.phtml',
  '{PHPSCRIPT}.php.html',
  '{PHPSCRIPT}.php.php.rar',
- '{PHPSCRIPT}.php.rar']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">{PHPSC</code><code class="variable-ellipsis">...</code></code>
+ '{PHPSCRIPT}.php.rar']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#-----</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="invalid_filenames_linux"></a><span class="summary-name">invalid_filenames_linux</span> = <code title="['', '']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code><code class="variable-group">]</code></code>
+        <a name="invalid_filenames_linux"></a><span class="summary-name">invalid_filenames_linux</span> = <code title="['']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code><code class="variable-group">]</code></code>
     </td>
   </tr>
 <tr>
@@ -267,30 +270,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="pywebfuzz.fuzzdb.attack_payloads.file_upload-class.html#path" class="summary-name">path</a> = <code title="'/Users/nathan/Development/pywebfuzz/pywebfuzz/data/attack-payloads/fi\
-le-upload/invalid-filesystem-chars-osx.txt'"><code class="variable-quote">'</code><code class="variable-string">/Users/nathan/Development/pywebfuzz/pywebfuzz/data/att</code><code class="variable-ellipsis">...</code></code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="file"></a><span class="summary-name">file</span> = <code title="open(path, &quot;rb&quot;)">open(path, &quot;rb&quot;)</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
         <a name="invalid_filesystem_chars_osx"></a><span class="summary-name">invalid_filesystem_chars_osx</span> = <code title="[':']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">:</code><code class="variable-quote">'</code><code class="variable-group">]</code></code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="item"></a><span class="summary-name">item</span> = <code title="''': 
-'''"><code class="variable-quote">'</code><code class="variable-string">: \n</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -531,13 +511,15 @@ le-upload/invalid-filesystem-chars-osx.txt'"><code class="variable-quote">'</cod
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#&lt;?php phpinfo(); ?&gt;</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">#-----</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.phtml</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.php.html</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.php::$DATA</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.php.php.rar</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.php.rar</code><code class="variable-quote">'</code><code class="variable-op">,</code>
- <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}::$DATA</code><code class="variable-quote">'</code><code class="variable-group">]</code>
+<code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -573,7 +555,8 @@ le-upload/invalid-filesystem-chars-osx.txt'"><code class="variable-quote">'</cod
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">#-----</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.phtml</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.php.html</code><code class="variable-quote">'</code><code class="variable-op">,</code>
  <code class="variable-quote">'</code><code class="variable-string">{PHPSCRIPT}.php.php.rar</code><code class="variable-quote">'</code><code class="variable-op">,</code>
@@ -645,25 +628,6 @@ le-upload/invalid-filesystem-chars-osx.txt'"><code class="variable-quote">'</cod
   </dl>
 </td></tr></table>
 </div>
-<a name="path"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">path</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-<code class="variable-quote">'</code><code class="variable-string">/Users/nathan/Development/pywebfuzz/pywebfuzz/data/attack-payloads/fi</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-<code class="variable-string">le-upload/invalid-filesystem-chars-osx.txt</code><code class="variable-quote">'</code>
-</pre></td></tr></table>
-</dd>
-  </dl>
-</td></tr></table>
-</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -691,7 +655,7 @@ le-upload/invalid-filesystem-chars-osx.txt'"><code class="variable-quote">'</cod
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Wed Jul 21 19:49:08 2010
+    Generated by Epydoc 3.0.1 on Fri Sep 24 14:02:04 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

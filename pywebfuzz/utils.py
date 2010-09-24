@@ -26,14 +26,9 @@ import urllib2
 
 def make_request(location, method="GET", postdata=None, headers=None):
     """ This provides a convenience function for making requests. This interfaces
-    with urllib2 and provides the ability to make GET and POST requests for content.
-    The return data from this function is headers and content"""
-    
-    # Checks to ensure that if it is a POST request that postdata is present
-    # I may remove this because it could potentially be a valid test case w/o data
-    if method == "POST" and postdata == None:
-        print("You did not specify any associated postdata and this is a POST request")
-        sys.exit(1)
+    with urllib2 and provides the ability to make GET, POST, PUT and DELETE requests.
+    The return data from this function is headers, content, http status, and
+    the timedelta from a succesful request"""
     
     # Checks to ensure that header values and postdata are in the appropriate format
     if type(headers) != dict and headers != None:
@@ -41,38 +36,28 @@ def make_request(location, method="GET", postdata=None, headers=None):
     if type(postdata) != str and postdata != None:
         raise TypeError, ("postdata is not a valid Python string")
     
-    ####
-    # Todo: Add support for more HTTP methods
-    ####
+    req = urllib2.Request(location, method, headers=headers)
+    req.get_method = lambda: method.upper()
+    req.add_data(postdata)
     
-    # Takes the appropriate actions based on the request type
-    if method == "GET":
-        if headers:
-            req = urllib2.Request(location, headers=headers)
-        else:
-            req = urllib2.Request(location)
-            
+    # Anticipate errors from either unavailable contentt or nonexistent resources
+    try:
+        start = datetime.datetime.now()
         response = urllib2.urlopen(req)
-        
-        headers = response.info()
-        content = response.read()
-        return(headers, content)
-        
-    elif method == "POST":
-        if headers:
-            req = urllib2.Request(location, headers=headers)
-        else:
-            req = urllib2.Request(location)
-            
-        req.add_data(postdata)
-
-        response = urllib2.urlopen(req)
-        headers = response.info()
-        content = response.read()
-        return(headers, content)
-        
+        end = datetime.datetime.now()
+    except urllib2.HTTPError, error:
+        return(error.headers, error.msg, error.code, None)
+    except urllib2.URLError, error:
+        # Noneexistent resources won't have headers or status codes
+        return(None, error.reason, None, None)
     else:
-        print("Invalid method for make_request function")
+        headers = response.info()
+        content = response.read()
+        # Grab the HTTP Status Code
+        code = response.getcode()
+        # Compute timedelta from a successful request
+        time = end - start
+        return(headers, content, code, time)
     
 def generate_range(start, stop, step=1, pre=None, post=None):
     """ Generate a range of values with optional stepping. Chars can be prepended or attached to
