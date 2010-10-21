@@ -7,7 +7,7 @@ except:
     print("You do not have setuptools installed. http://pypi.python.org/pypi/setuptools")
     sys.exit(1)
 
-VERSION = "0.5.0"
+VERSION = "0.6.0"
 
 long_description = """pywebfuzz is a Python module to assist in the
 identification of vulnerabilities in web applications through brute force methods.
