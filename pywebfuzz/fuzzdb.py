@@ -382,28 +382,29 @@ class attack_payloads:
         
 class Discovery:
     """ This implements the discovery class from fuzzdb """
+    
     class FilenameBruteforce:
         """ This implements the FilenameBruteforce class from fuzzdb """
         
         # Extensions.Backup.fuzz.txt
         location = "/data/Discovery/FilenameBruteforce/Extensions.Backup.fuzz.txt"
-        Extensions.Backup = file_read(location)
+        Extensions_Backup = file_read(location)
         
         # Extensions.Common.fuzz.txt
         location = "/data/Discovery/FilenameBruteforce/Extensions.Common.fuzz.txt"
-        Extensions.Common = file_read(location)
+        Extensions_Common = file_read(location)
         
         # Extensions.Compressed.fuzz.txt
         location = "/data/Discovery/FilenameBruteforce/Extensions.Compressed.fuzz.txt"
-        Extensions.Compressed = file_read(location)
+        Extensions_Compressed = file_read(location)
         
         # Extensions.Mostcommon.fuzz.txt
         location = "/data/Discovery/FilenameBruteforce/Extensions.Mostcommon.fuzz.txt"
-        Extensions.Mostcommon = file_read(location)
+        Extensions_Mostcommon = file_read(location)
         
         # Extensions.Skipfish.fuzz.txt
         location = "/data/Discovery/FilenameBruteforce/Extensions.Skipfish.fuzz.txt"
-        Extensions.Skipfish = file_read(location)
+        Extensions_Skipfish = file_read(location)
         
         # WordlistSkipfish.fuzz.txt
         location = "/data/Discovery/FilenameBruteforce/WordlistSkipfish.fuzz.txt"
