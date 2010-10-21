@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """
-This module uses logic to implement values from the fuzzdb project. The fuzzdb
-project.
+This module uses logic to implement values from the fuzzdb project. 
 
 (c) 2010 Nathan Hamiel
 Email: nathan{at}neohaxor{dot}org
@@ -62,6 +61,13 @@ class attack_payloads:
         # interesting-metacharacters.txt
         location = "/data/attack-payloads/all-attacks/interesting-metacharacters.txt"
         interesting_metacharacters = file_read(location)
+        
+    class BizLogic:
+        """ This implements the tiems from the BizLogic directory from fuzzdb """
+        
+        # CommonMethods.fuzz.txt
+        location = "/data/attack-payloads/BizLogic/CommonMethods.fuzz.txt"
+        CommonMethods = file_read(location)
         
     class control_chars:
         """ This implements the control-chars directory from fuzzdb """
@@ -248,9 +254,25 @@ class attack_payloads:
         location = "/data/attack-payloads/os-cmd-execution/commands-windows.txt"
         commands_windows = file_read(location)
         
+        # LinuxCommands.fuzz.txt
+        location = "/data/attack-payloads/os-cmd-execution/LinuxCommands.fuzz.txt"
+        LinuxCommands = file_read(location)
+        
+        # OSXCommands.fuzz.txt
+        location = "/data/attack-payloads/os-cmd-execution/OSXCommands.fuzz.txt"
+        OSXCommands = file_read(location)
+        
         # source-disc-cmd-exec-traversal.txt
         location = "/data/attack-payloads/os-cmd-execution/source-disc-cmd-exec-traversal.txt"
         source_disc_cmd_exec_traversal = file_read(location)
+        
+        # WindowsCommands.fuzz.txt
+        location = "/data/attack-payloads/os-cmd-execution/WindowsCommands.fuzz.txt"
+        WindowsCommands = file_read(location)
+        
+        # WindowsPowershell.fuzz.txt
+        location = "/data/attack-payloads/os-cmd-execution/WindowsPowershell.fuzz.txt"
+        WindowsCommands = file_read(location)
                 
     class os_dir_indexing:
         """ This implements the os-dir-indexing payloads from fuzzdb """
@@ -358,168 +380,165 @@ class attack_payloads:
         location = "/data/attack-payloads/xss/xss-uri.txt"
         xss_uri = file_read(location)
         
-class discovery:
+class Discovery:
     """ This implements the discovery class from fuzzdb """
-    class filename_bruteforce:
-        """ This implements the filename-bruteforce class from fuzzdb """
-        class file_extensions:
-            """ This implements the file-extensions payloads from fuzzdb """
-            
-            
-            # file-extensions-backup-files.txt
-            location = "/data/discovery/filename-bruteforce/file-extensions/file-extensions-backup-files.txt"
-            file_extensions_backup_files = file_read(location)
-            
-            # file-extensions-common-datafile-types.txt
-            location = "/data/discovery/filename-bruteforce/file-extensions/file-extensions-common-datafile-types.txt"
-            file_extensions_common_datafile_types = file_read(location)
-            
-            # file-extensions-compressed-filetypes.txt
-            location = "/data/discovery/filename-bruteforce/file-extensions/file-extensions-compressed-filetypes.txt"
-            file_extensions_compressed_filetypes = file_read(location)
-            
-            # file-extensions-mostcommon.txt
-            location = "/data/discovery/filename-bruteforce/file-extensions/file-extensions-mostcommon.txt"
-            file_extensions_mostcommon = file_read(location)
-            
-            # file-extensions-skipfish.txt
-            location = "/data/discovery/filename-bruteforce/file-extensions/file-extensions-skipfish.txt"
-            file_extensions_skipfish = file_read(location)
-            
-        class file_or_dir_root_wordlists:
-            """ This implements the file-or-dir-root-wordlists payloads from fuzzdb """
-            # wordlist-skipfish.txt
-            location = "/data/discovery/filename-bruteforce/file-or-dir-root-wordlists/wordlist-skipfish.txt"
-            wordlist_skipfish = file_read(location)
-            
-    class generic:
-        """ This implements the generic class from fuzzdb """
-        class cms:
+    class FilenameBruteforce:
+        """ This implements the FilenameBruteforce class from fuzzdb """
+        
+        # Extensions.Backup.fuzz.txt
+        location = "/data/Discovery/FilenameBruteforce/Extensions.Backup.fuzz.txt"
+        Extensions.Backup = file_read(location)
+        
+        # Extensions.Common.fuzz.txt
+        location = "/data/Discovery/FilenameBruteforce/Extensions.Common.fuzz.txt"
+        Extensions.Common = file_read(location)
+        
+        # Extensions.Compressed.fuzz.txt
+        location = "/data/Discovery/FilenameBruteforce/Extensions.Compressed.fuzz.txt"
+        Extensions.Compressed = file_read(location)
+        
+        # Extensions.Mostcommon.fuzz.txt
+        location = "/data/Discovery/FilenameBruteforce/Extensions.Mostcommon.fuzz.txt"
+        Extensions.Mostcommon = file_read(location)
+        
+        # Extensions.Skipfish.fuzz.txt
+        location = "/data/Discovery/FilenameBruteforce/Extensions.Skipfish.fuzz.txt"
+        Extensions.Skipfish = file_read(location)
+        
+        # WordlistSkipfish.fuzz.txt
+        location = "/data/Discovery/FilenameBruteforce/WordlistSkipfish.fuzz.txt"
+        WordlistSkipfish = file_read(location)
+    
+    class PredictableRes:
+        """ This implements the PredictableRes class from fuzzdb """
+        
+        class CMS:
             """ This implements the cms payloads from fuzzdb """
             
-            # drupal_plugins.txt
-            location = "/data/discovery/generic/cms/drupal_plugins.txt"
+            # drupal_plugins.fuzz.txt
+            location = "/data/discovery/PredictableRes/CMS/drupal_plugins.fuzz.txt"
             drupal_plugins = file_read(location)
             
-            # drupal_themes.txt
-            location = "/data/discovery/generic/cms/drupal_themes.txt"
+            # drupal_themes.fuzz.txt
+            location = "/data/discovery/PredictableRes/CMS/drupal_themes.fuzz.txt"
             drupal_themes = file_read(location)
             
-            # joomla_plugins.txt
-            location = "/data/discovery/generic/cms/joomla_plugins.txt"
+            # joomla_plugins.fuzz.txt
+            location = "/data/discovery/PredictableRes/CMS/joomla_plugins.fuzz.txt"
             joomla_plugins = file_read(location)
             
-            # joomla_themes.txt
-            location = "/data/discovery/generic/cms/joomla_themes.txt"
+            # joomla_themes.fuzz.txt
+            location = "/data/discovery/PredictableRes/CMS/joomla_themes.fuzz.txt"
             joomla_themes = file_read(location)
             
-            # wp_plugins.txt
-            location = "/data/discovery/generic/cms/wp_plugins.txt"
+            # wp_plugins.fuzz.txt
+            location = "/data/discovery/PredictableRes/CMS/wp_plugins.fuzz.txt"
             wp_plugins = file_read(location)
             
-            # wp_themes.txt
-            location = "/data/discovery/generic/cms/wp_themes.txt"
+            # wp_themes.fuzz.txt
+            location = "/data/discovery/PredictableRes/CMS/wp_themes.fuzz.txt"
             wp_themes = file_read(location)
             
-        # cgi-HTTP-POST-reqd.txt
-        location = "/data/discovery/generic/cgi-HTTP-POST-reqd.txt"
-        cgi_HTTP_POST_reqd = file_read(location)
+        # Apache.fuzz.txt
+        location = "/data/discovery/PredictableRes/Apache.fuzz.txt"
+        Apache = file_read(location)
         
-        # cgi-x-platform.txt
-        location = "/data/discovery/generic/cgi-x-platform.txt"
-        cgi_x_platform = file_read(location)
+        # ApacheTomcat.fuzz.txt
+        location = "/data/discovery/PredictableRes/ApacheTomcat.fuzz.txt"
+        ApacheTomcat = file_read(location)
         
-        # interesting-dirs-kitchensink.txt
-        location = "/data/discovery/generic/interesting-dirs-kitchensink.txt"
-        interesting_dirs_kitchensink = file_read(location)
+        # CGI_HTTP_POST_WINDOWS.fuzz.txt
+        location = "/data/discovery/PredictableRes/CGI_HTTP_POST_WINDOWS.fuzz.txt"
+        CGI_HTTP_POST_WINDOWS = file_read(location)
         
-        # interesting-files-apache-tomcat.txt
-        location = "/data/discovery/generic/interesting-files-apache-tomcat.txt"
-        interesting_files_apache_tomcat = file_read(location)
+        # CGI_HTTP_POST.fuzz.txt
+        location = "/data/discovery/PredictableRes/CGI_HTTP_POST.fuzz.txt"
+        CGI_HTTP_POST = file_read(location)
         
-        # interesting-files-apache.txt
-        location = "/data/discovery/generic/interesting-files-apache.txt"
-        interesting_files_apache = file_read(location)
+        # CGI_Microsoft.fuzz.txt
+        location = "/data/discovery/PredictableRes/CGI_Microsoft.fuzz.txt"
+        CGI_Microsoft = file_read(location)
         
-        # interesting-files-coldfusion.txt
-        location = "/data/discovery/generic/interesting-files-coldfusion.txt"
-        interesting_files_coldfusion = file_read(location)
+        # CGI_XPlatform.fuzz.txt
+        location = "/data/discovery/PredictableRes/CGI_XPlatform.fuzz.txt"
+        CGI_XPlatform = file_read(location)
         
-        # interesting-files-hyperion.txt
-        location = "/data/discovery/generic/interesting-files-hyperion.txt"
-        interesting_files_hyperion = file_read(location)
+        # ColdFusion.fuzz.txt
+        location = "/data/discovery/PredictableRes/ColdFusion.fuzz.txt"
+        ColdFusion = file_read(location)
         
-        # interesting-files-logins.txt
-        location = "/data/discovery/generic/interesting-files-logins.txt"
-        interesting_files_logins = file_read(location)
+        # HTTP_POST_Microsoft.fuzz.txt
+        location = "/data/discovery/PredictableRes/HTTP_POST_Microsoft.fuzz.txt"
+        HTTP_POST_Microsoft = file_read(location)
         
-        # interesting-files-lotus-notes.txt
-        location = "/data/discovery/generic/interesting-files-lotus-notes.txt"
-        interesting_files_lotus_notes = file_read(location)
+        # Hyperion.fuzz.txt
+        location = "/data/discovery/PredictableRes/Hyperion.fuzz.txt"
+        Hyperion = file_read(location)
         
-        # interesting-files-oracle-application-server.txt
-        location = "/data/discovery/generic/interesting-files-oracle-application-server.txt"
-        interesting_files_oracle_application_server = file_read(location)
+        # JavaServlets_Common.fuzz.txt
+        location = "/data/discovery/PredictableRes/JavaServlets_Common.fuzz.txt"
+        JavaServlets_Common = file_read(location)
         
-        # interesting-files-passwords.txt
-        location = "/data/discovery/generic/interesting-files-passwords.txt"
-        interesting_files_passwords = file_read(location)
+        # JBoss.fuzz.txt
+        location = "/data/discovery/PredictableRes/JBoss.fuzz.txt"
+        JBoss = file_read(location)
         
-        # interesting-files-random.txt
-        location = "/data/discovery/generic/interesting-files-random.txt"
-        interesting_files_random = file_read(location)
+        # KitchensinkDirectories.fuzz.txt
+        location = "/data/discovery/PredictableRes/KitchensinkDirectories.fuzz.txt"
+        KitchensinkDirectories = file_read(location)
         
-        # interesting-files-websphere.txt
-        location = "/data/discovery/generic/interesting-files-websphere.txt"
-        interesting_files_websphere = file_read(location)
+        # Logins.fuzz.txt
+        location = "/data/discovery/PredictableRes/Logins.fuzz.txt"
+        Logins = file_read(location)
         
-        # php-common-backdoors.txt
-        location = "/data/discovery/generic/php-common-backdoors.txt"
-        php_common_backdoors = file_read(location)
+        # LotusNotes.fuzz.txt
+        location = "/data/discovery/PredictableRes/LotusNotes.fuzz.txt"
+        LotusNotes = file_read(location)
         
-        # tftp.txt
-        location = "/data/discovery/generic/tftp.txt"
+        # Netware.fuzz.txt
+        location = "/data/discovery/PredictableRes/Netware.fuzz.txt"
+        Netware = file_read(location)
+        
+        # OracleAppServer.fuzz.txt
+        location = "/data/discovery/PredictableRes/OracleAppServer.fuzz.txt"
+        OracleAppServer = file_read(location)
+        
+        # Passwords.fuzz.txt
+        location = "/data/discovery/PredictableRes/Passwords.fuzz.txt"
+        Passwords = file_read(location)
+        
+        # PHP_CommonBackdoors.fuzz.txt
+        location = "/data/discovery/PredictableRes/PHP_CommonBackdoors.fuzz.txt"
+        PHP_CommonBackdoors = file_read(location)
+        
+        # proxy-conf.fuzz.txt
+        location = "/data/discovery/PredictableRes/proxy-conf.fuzz.txt"
+        proxy_conf = file_read(location)
+        
+        # RandomFiles.fuzz.txt
+        location = "/data/discovery/PredictableRes/RandomFiles.fuzz.txt"
+        RandomFiles = file_read(location)
+        
+        # Sharepoint.fuzz.txt
+        location = "/data/discovery/PredictableRes/Sharepoint.fuzz.txt"
+        Sharepoint = file_read(location)
+        
+        # SiteMinder.fuzz.txt
+        location = "/data/discovery/PredictableRes/SiteMinder.fuzz.txt"
+        SiteMinder = file_read(location)
+        
+        # tftp.fuzz.txt
+        location = "/data/discovery/PredictableRes/tftp.fuzz.txt"
         tftp = file_read(location)
         
-    class unix:
-        """ This implements the unix payloads from fuzzdb """
-        # interesting-files-dotfiles.txt
-        location = "/data/discovery/unix/interesting-files-dotfiles.txt"
-        interesting_files_dotfiles = file_read(location)
+        # UserAgents.fuzz.txt
+        location = "/data/discovery/PredictableRes/UserAgents.fuzz.txt"
+        UserAgents = file_read(location)
         
-        # interesting-files-iplanet.txt
-        location = "/data/discovery/unix/interesting-files-dotfiles.txt"
-        interesting_files_iplanet = file_read(location)
+        # Websphere.fuzz.txt
+        location = "/data/discovery/PredictableRes/Websphere.fuzz.txt"
+        Websphere = file_read(location)
         
-        # interesting-files-sun-app-server.txt
-        location = "/data/discovery/unix/interesting-files-sun-app-server.txt"
-        interesting_files_sun_app_server = file_read(location)
-        
-    class win:
-        """ This implements the win payloads from fuzzdb """
-        # cgi-HTTP-POST-reqd-microsoft.txt
-        location = "/data/discovery/win/cgi-HTTP-POST-reqd-microsoft.txt"
-        cgi_HTTP_POST_reqd_microsoft = file_read(location)
-        
-        # cgi-microsoft.txt
-        location = "/data/discovery/win/cgi-microsoft.txt"
-        cgi_microsoft = file_read(location)
-        
-        # interesting-files-microsoft-iis-http-post.txt
-        location = "/data/discovery/win/interesting-files-microsoft-iis-http-post.txt"
-        interesting_files_microsoft_iis_http_post = file_read(location)
-        
-        # interesting-files-microsoft-iis.txt
-        location = "/data/discovery/win/interesting-files-microsoft-iis.txt"
-        interesting_files_microsoft_iis = file_read(location)
-        
-        # interesting-files-microsoft-sharepoint.txt
-        location = "/data/discovery/win/interesting-files-microsoft-sharepoint.txt"
-        interesting_files_microsoft_sharepoint = file_read(location)
-        
-        # interesting-files-netware.txt
-        location = "/data/discovery/win/interesting-files-netware.txt"
-        interesting_files_netware = file_read(location)
         
 class regex:
     """ This implements the regex payloads from fuzzdb """
