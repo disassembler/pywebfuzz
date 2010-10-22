@@ -23,6 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 import urllib
 import urllib2
+import datetime
 
 def make_request(location, method="GET", postdata=None, headers=None):
     """ This provides a convenience function for making requests. This interfaces
@@ -36,7 +37,11 @@ def make_request(location, method="GET", postdata=None, headers=None):
     if type(postdata) != str and postdata != None:
         raise TypeError, ("postdata is not a valid Python string")
     
-    req = urllib2.Request(location, method, headers=headers)
+    if headers:
+        req = urllib2.Request(location, method, headers=headers)
+    else:
+        req = urllib2.Request(location, method)
+        
     req.get_method = lambda: method.upper()
     req.add_data(postdata)
     
