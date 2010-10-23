@@ -374,7 +374,7 @@ class attack_payloads:
         """ This implements the xss payloads from fuzzdb """
         # xss-rsnake.txt
         location = "/data/attack-payloads/xss/xss-rsnake.txt"
-        xss_rsnake = list()
+        xss_rsnake = file_read(location)
 
         # xss-uri.txt
         location = "/data/attack-payloads/xss/xss-uri.txt"
