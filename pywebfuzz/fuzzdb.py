@@ -566,7 +566,7 @@ class wordlists_misc:
     wordlist_alphanumeric_case = file_read(location)
     
     # wordlist-common-snmp-community-strings.txt
-    location = "/data/wordlists-misc/wordlist-alphanumeric-case.txt"
+    location = "/data/wordlists-misc/wordlist-common-snmp-community-strings.txt"
     wordlist_common_snmp_community_strings = file_read(location)
     
     # wordlist-dna.txt
